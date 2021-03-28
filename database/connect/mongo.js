@@ -7,7 +7,7 @@ module.exports = {
             useUnifiedTopology: true
         };
 
-        mongoose.connect("mongodb://localhost:27017", dbOptions);
+        mongoose.connect("mongodb://34.236.172.10:27017", dbOptions);
 
         mongoose.connection.on("connected", () => {
             console.log("Mongoose has successfully connected!");
