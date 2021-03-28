@@ -12,4 +12,4 @@ const BankSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model("bank", BankSchema, "Bancos");
+module.exports = mongoose.model("Bancos", BankSchema, "Bancos");
