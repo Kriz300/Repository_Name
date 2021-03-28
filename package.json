@@ -4,7 +4,7 @@
   "description": "Programa para el calculo y comparación de la CAE (Carga Anual Equivalente). Creado con el objetivo de facilitar la elección de un banco a la hora de pedir un credito.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -34,5 +34,8 @@
     "express-session": "^1.17.1",
     "mongoose": "^5.12.1",
     "passport": "^0.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

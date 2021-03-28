@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const Store = require("connect-mongo")(session);
 const mongo = require("./database/connect/mongo");
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT;
 const routes = require("./routes");
 
 mongo.init();
