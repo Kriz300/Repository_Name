@@ -1,0 +1,38 @@
+{
+  "name": "api_cae",
+  "version": "1.0.0",
+  "description": "Programa para el calculo y comparación de la CAE (Carga Anual Equivalente). Creado con el objetivo de facilitar la elección de un banco a la hora de pedir un credito.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kriz300/SimuCae"
+  },
+  "keywords": [
+    "CAE",
+    "Carga",
+    "Anual",
+    "Equivalente",
+    "Credito",
+    "Consumo"
+  ],
+  "author": "Kriz, Waskertyioup, Niyet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kriz300/SimuCae/issues"
+  },
+  "homepage": "https://github.com/Kriz300/SimuCae#readme",
+  "dependencies": {
+    "@formulajs/formulajs": "^2.6.5",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.1",
+    "passport": "^0.4.1"
+  }
+}
