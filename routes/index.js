@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
-const Bancos = require("./Bancos");
+const bancos = require("./bancos");
 
-router.use("/Bancos", Bancos);
+router.use("/bancos", bancos);
 
 module.exports = router;
