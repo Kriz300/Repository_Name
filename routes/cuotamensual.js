@@ -11,7 +11,7 @@ router.get("/:plazo&:monto&:valor_cuota", async (req, res) => {
 	var intereses = interesInverso.interesinverso(parseInt(req.params["monto"]), capFinal, parseInt(req.params["plazo"]))/12;
 
 	cae = excel.RATE(parseInt(req.params["plazo"]), parseInt(req.params["valor_cuota"]), (parseInt(req.params["monto"])*-1))*1200;
-	tabla.push(["Credito Personalizado (Cuota Mensual)", ((cae).toFixed(2))+"%", parseInt(req.params["valor_cuota"]), intereses, parseInt(req.params["valor_cuota"])*parseInt(req.params["plazo"])]);
+	tabla.push(["Credito Personalizado (Cuota Mensual)", ((cae).toFixed(2))+"%", parseInt(req.params["valor_cuota"]), (intereses).toFixed(0), parseInt(req.params["valor_cuota"])*parseInt(req.params["plazo"])]);
 	
 	var temp = await bancos.bancos(parseInt(req.params["monto"]), parseInt(req.params["plazo"]));
 	temp.forEach(element => {

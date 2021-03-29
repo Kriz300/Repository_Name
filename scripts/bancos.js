@@ -31,7 +31,7 @@ let bancos = async (monto, plazo) => {
 
         valor_cuota = monto_cuotas.interescompuesto(monto, bank["intereses"][flag], plazo)/plazo;
         cae = excel.RATE(plazo, valor_cuota, (monto*-1))*1200;
-        tabla.push([bank.nombre, ((cae).toFixed(2))+"%", valor_cuota, bank["intereses"][flag], valor_cuota*plazo]);
+        tabla.push([bank.nombre, ((cae).toFixed(2))+"%", (valor_cuota).toFixed(0), bank["intereses"][flag], (valor_cuota*plazo).toFixed(0)]);
     });
     return tabla;
 }
