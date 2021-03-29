@@ -23,12 +23,6 @@ let bancos = async (monto, plazo) => {
     });
 
     banks.forEach(bank => {
-        //console.log(monto);
-        //console.log(plazo);
-        //console.log(bank["intereses"][flag]);
-        //console.log(monto_cuotas.interescompuesto(monto, bank["intereses"][flag], plazo));
-        //console.log(monto_cuotas.interescompuesto(monto, bank["intereses"][flag], plazo)/plazo);
-
         valor_cuota = monto_cuotas.interescompuesto(monto, bank["intereses"][flag], plazo)/plazo;
         cae = excel.RATE(plazo, valor_cuota, (monto*-1))*1200;
         tabla.push([bank.nombre, ((cae).toFixed(2))+"%", (valor_cuota).toFixed(0), (bank["intereses"][flag]).toString() + "%", (valor_cuota*plazo).toFixed(0)]);
