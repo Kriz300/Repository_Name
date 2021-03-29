@@ -6,13 +6,7 @@ const interesCompuesto = require("../scripts/interescompuesto");
 //cuota mensual
 router.get("/:plazo&:monto&:interes", (req, res) => {
 	var tabla = [], cae;
-
-	console.log(req.params["plazo"]);
-	console.log(req.params["monto"]);
-	console.log(req.params["interes"]);
-	console.log(req.params);
-
-
+	
 	var capFinal = interesCompuesto.interescompuesto(parseInt(req.params["monto"]), parseFloat(req.params["interes"]),parseInt(req.params["plazo"]));
 	var valor_cuota = capFinal/parseInt(req.params["plazo"]);
 
